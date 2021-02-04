@@ -89,7 +89,7 @@ function OwlESP:setText(text)
 end;
 
 function OwlESP:setBypass(visible)
-    self.Bypass = visible;
+    self.Bypass[2] = visible;
 end;
 
 function OwlESP:setTeamCheck(visible)
