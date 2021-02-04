@@ -88,6 +88,10 @@ function OwlESP:setText(text)
     self.name[2] = text;
 end;
 
+function OwlESP:setBypass(visible)
+    self.Bypass[2] = visible;
+end;
+
 function OwlESP:setTeamCheck(visible)
   self.teamCheck[2] = visible;
 end;
