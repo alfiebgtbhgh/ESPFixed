@@ -38,7 +38,7 @@ function OwlESP.new(data)
     local rootPos, rootVis = worldToViewportPoint(currentCamera, rootPart.Position);
     local headPos = worldToViewportPoint(currentCamera, head.Position + headOffset);
     local legPos = worldToViewportPoint(currentCamera, rootPart.Position - legOffset);
-    local visible = (self.teamCheck and plr.TeamColor ~= localPlayer.TeamColor) or (not self.teamCheck);
+    local visible = true;
 
     local espBox = newDrawing("Square");
     espBox.Color = self.espColor;
@@ -89,7 +89,7 @@ function OwlESP:setText(text)
 end;
 
 function OwlESP:setBypass(visible)
-    self.Bypass[2] = visible;
+    self.Bypass = visible;
 end;
 
 function OwlESP:setTeamCheck(visible)
@@ -105,7 +105,7 @@ function OwlESP:update()
         local rootPos, rootVis = worldToViewportPoint(currentCamera, rootPart.Position);
         local headPos = worldToViewportPoint(currentCamera, head.Position + headOffset);
         local legPos = worldToViewportPoint(currentCamera, rootPart.Position - legOffset);
-        local visible = (self.teamCheck and plr.TeamColor ~= localPlayer.TeamColor) or (not self.teamCheck);
+        local visible = true;
 
         if rootVis then
             espBox.Size = newVector2(2350 / rootPos.Z, headPos.Y - legPos.Y);
