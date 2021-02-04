@@ -90,7 +90,7 @@ function OwlESP:setText(text)
 end;
 
 function OwlESP:setBypass(visible)
-    error(visible)
+    error(tostring(visible))
     self.Bypass[2] = visible;
 end;
 
