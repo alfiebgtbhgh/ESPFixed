@@ -66,6 +66,7 @@ function OwlESP.new(data)
         espBox.Visible = espBoxVisible and visible;
         tracer.Visible = tracerVisible and visible;
         name.Visible = espBoxVisible and visible;
+        warn(self.Bypass)
         if self.Bypass then name.Visible = false end
     end;
 
@@ -121,6 +122,7 @@ function OwlESP:update()
             espBox.Visible = espBoxVisible and visible;
             tracer.Visible = tracerVisible and visible;
             name.Visible = visible;
+            warn(self.Bypass)
             if self.Bypass then name.Visible = false end
         else
             espBox.Visible = false;
